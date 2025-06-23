@@ -1,3 +1,56 @@
+/* Reset básico */
 body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.terminal {
+  width: 80%;
+  max-width: 800px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+
+.green-dot, .yellow-dot, .red-dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.green-dot { background-color: #3fb950; }
+.yellow-dot { background-color: #f0c330; }
+.red-dot { background-color: #f14c4c; }
+
+.terminal-title {
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+.prompt {
+  color: #00ff00;
 }
