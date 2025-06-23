@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terminal</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Org</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="terminal">
-    <div class="terminal-header">
-      <span class="green-dot"></span>
-      <span class="yellow-dot"></span>
-      <span class="red-dot"></span>
-      <div class="terminal-title">bash Lestay</div>
-    </div>
+    <header>
+        <h1>Lestay<span class="org">org</span></h1>
+    </header>
 
-    <div class="terminal-body">
-      <p><span class="prompt">$</span> title: Como simular um terminal com HTML e CSS</p>
-      <p><span class="prompt">$</span> description: Neste post, mostramos como criar um layout estilo terminal para projetos criativos.</p>
-      <p><span class="prompt">$</span> example: Utilize divs com fundo escuro, fonte monoespaçada, e simule comandos com símbolos $.</p>
-    </div>
-  </div>
+    <nav class="tabs">
+        <button class="tab-button active" onclick="showTab('networks')">Networks</button>
+        <button class="tab-button" onclick="showTab('security')">Security</button>
+        <button class="tab-button" onclick="showTab('os')">OS</button>
+    </nav>
+
+    <main>
+        <section id="networks" class="tab-content active">
+            <h2>// Networks</h2>
+            <p>null.</p>
+        </section>
+        <section id="security" class="tab-content">
+            <h2>// Security</h2>
+            <p>null.</p>
+        </section>
+        <section id="os" class="tab-content">
+            <h2>// Operating Systems</h2>
+            <p>null.</p>
+        </section>
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
